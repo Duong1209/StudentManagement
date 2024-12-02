@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/mainFragment">
+
+    <!-- Define the mainFragment -->
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.studentmanagement.MainFragment"
+        android:label="Main Fragment"
+        tools:layout="@layout/fragment_main">
+
+        <!-- Action to navigate from mainFragment to addStudentFragment -->
+        <action
+            android:id="@+id/action_mainFragment_to_editStudentFragment"
+            app:destination="@id/addStudentFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_addStudentFragment"
+            app:destination="@id/addStudentFragment" />
+    </fragment>
+
+    <!-- Define the addStudentFragment -->
+    <fragment
+        android:id="@+id/addStudentFragment"
+        android:name="com.example.studentmanagement.AddStudentFragment"
+        android:label="Add Student Fragment"
+        tools:layout="@layout/fragment_add_student" />
+</navigation>
